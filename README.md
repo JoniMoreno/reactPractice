@@ -1,1 +1,0 @@
-# Just a QA engineer dreaming of being a software developer
