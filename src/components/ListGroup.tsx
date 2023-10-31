@@ -1,12 +1,7 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
+import { ListGroupProps } from "../types/ListGroupProps";
 
-interface Props {
-  items: string[];
-  heading: string;
-  onSelectItem: (item: string) => void;
-}
-
-function ListGroup({ items, heading, onSelectItem }: Props) {
+function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
   // Hook
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
@@ -25,7 +20,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
             key={item}
             onClick={() => {
               setSelectedIndex(index);
-              onSelectItem(item);
+              onSelectItem();
             }}
           >
             {item}
